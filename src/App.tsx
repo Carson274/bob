@@ -57,14 +57,16 @@ function App() {
     <div className='container'>
       {pageNumber === 1 && (
         <>
-          <h1 className='title'>Congratulations Robin!🥳👏</h1>
-          <h2 className='subheading'>You have been invited to go on a date with me🙂‍↕️</h2>
+          <h1 className='title'>Hi Robin!🥳👏</h1>
+          <img src='../public/4.gif' alt='Page 1 GIF' className='page-gif' />
+          <h2 className='subheading'>It's time to go on a date with me🙂‍↕️</h2>
           <button className='button' onClick={() => setPageNumber(2)}>Next</button> 
         </>
       )}
       {pageNumber === 2 && (
         <>
           <h1 className='subheading'>Select what you'd like to do:</h1>
+          <img src='../public/5.gif' alt='Page 2 GIF' className='page-gif' />
           <div className='checkboxes'>
             <label>
               <input
@@ -72,7 +74,7 @@ function App() {
                 checked={checkBoxes.hongdae}
                 onChange={(e) => setCheckBoxes({ ...checkBoxes, hongdae: e.target.checked })}
               />
-              Walk around Hongdae
+              Walk around Hongdae🚶
             </label>
             <label>
               <input
@@ -80,7 +82,7 @@ function App() {
                 checked={checkBoxes.onesie}
                 onChange={(e) => setCheckBoxes({ ...checkBoxes, onesie: e.target.checked })}
               />
-              Buy and Wear Onesies
+              Buy and Wear Onesies🍌
             </label>
             <label>
               <input
@@ -88,7 +90,7 @@ function App() {
                 checked={checkBoxes.skating}
                 onChange={(e) => setCheckBoxes({ ...checkBoxes, skating: e.target.checked })}
               />
-              Go Ice Skating
+              Go Ice Skating⛸️
             </label>
           </div>
           <p className='text'>(You can select up to 3)</p>
@@ -101,6 +103,7 @@ function App() {
       {pageNumber === 3 && (
         <>
           <h1 className='subheading'>What is your favorite flower?</h1>
+          <img src='../public/7.gif' alt='Page 3 GIF' className='page-gif' />
           <input
             type='text'
             value={flowerName}
@@ -111,20 +114,21 @@ function App() {
           <p className='text'>(Don't question it hehe)</p>
           <div className='button-group'>
             <button className='button' onClick={() => setPageNumber(2)}>Back</button>
-            <button className='button' onClick={() => setPageNumber(4)}>Next</button>
+            <button className='button' onClick={() => setPageNumber(4)} disabled={!flowerName}>Next</button>
           </div>
         </>
       )}
       {pageNumber === 4 && (
         <>
           <h1 className='subheading'>Final Confirmation</h1>
+          <img src='../public/6.gif' alt='Page 4 GIF' className='page-gif' />
           <label>
             <input
               type='checkbox'
               checked={creditCard}
               onChange={(e) => setCreditCard(e.target.checked)}
             />
-            By checking this box, I agree to leave all of my credit cards at home for the duration of the date
+            By checking this box, you agree to leave all of your credit cards at home for the duration of the date
           </label>
           <div className='button-group'>
             <button className='button' onClick={() => setPageNumber(3)}>Back</button>
