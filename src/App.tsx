@@ -58,7 +58,7 @@ function App() {
       {pageNumber === 1 && (
         <>
           <h1 className='title'>Hi Robin!🥳👏</h1>
-          <img src='../public/4.gif' alt='Page 1 GIF' className='page-gif' />
+          <img src='./public/4.gif' alt='Page 1 GIF' className='page-gif' />
           <h2 className='subheading'>It's time to go on a date with me🙂‍↕️</h2>
           <button className='button' onClick={() => setPageNumber(2)}>Next</button> 
         </>
@@ -66,7 +66,7 @@ function App() {
       {pageNumber === 2 && (
         <>
           <h1 className='subheading'>Select what you'd like to do:</h1>
-          <img src='../public/5.gif' alt='Page 2 GIF' className='page-gif' />
+          <img src='./public/5.gif' alt='Page 2 GIF' className='page-gif' />
           <div className='checkboxes'>
             <label>
               <input
@@ -112,7 +112,7 @@ function App() {
       {pageNumber === 3 && (
         <>
           <h1 className='subheading'>What is your favorite flower?</h1>
-          <img src='../public/7.gif' alt='Page 3 GIF' className='page-gif' />
+          <img src='./public/7.gif' alt='Page 3 GIF' className='page-gif' />
           <input
             type='text'
             value={flowerName}
@@ -130,7 +130,7 @@ function App() {
       {pageNumber === 4 && (
         <>
           <h1 className='subheading'>Final Confirmation</h1>
-          <img src='../public/6.gif' alt='Page 4 GIF' className='page-gif' />
+          <img src='./public/6.gif' alt='Page 4 GIF' className='page-gif' />
           <label>
             <input
               type='checkbox'
@@ -148,7 +148,7 @@ function App() {
       {pageNumber === 5 && (
         <>
           <h1 className='title'>Date Request Sent!💌</h1>
-          <img src='../public/8.gif' alt='Page 5 GIF' className='page-gif' />
+          <img src='./public/8.gif' alt='Page 5 GIF' className='page-gif' />
           <p className='subheading'>Looking forward to it :)</p>
         </>
       )}
