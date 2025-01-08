@@ -14,16 +14,16 @@ function App() {
   })
 
   const [flowerName, setFlowerName] = useState('')
-
   const [pageNumber, setPageNumber] = useState(1)
-
   const [creditCard, setCreditCard] = useState(false)
+  const [otherActivity, setOtherActivity] = useState('')
 
   const submit = () => {
     const activities = [];
     if (checkBoxes.hongdae) activities.push("Go to Hongdae");
     if (checkBoxes.onesie) activities.push("Wear Onesies");
     if (checkBoxes.skating) activities.push("Ice Skate");
+    if (otherActivity) activities.push(otherActivity);
   
     const activitiesText = activities.length
       ? `Robin wants to: ${activities.join(", ")}.`
@@ -91,6 +91,15 @@ function App() {
                 onChange={(e) => setCheckBoxes({ ...checkBoxes, skating: e.target.checked })}
               />
               Go Ice Skating⛸️
+            </label>
+            <label>
+              <input
+                type='text'
+                value={otherActivity}
+                onChange={(e) => setOtherActivity(e.target.value)}
+                className='input'
+                placeholder='Other activity...'
+              />
             </label>
           </div>
           <p className='text'>(You can select up to 3)</p>
