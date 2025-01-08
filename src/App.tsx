@@ -138,7 +138,9 @@ function App() {
       )}
       {pageNumber === 5 && (
         <>
-          <h1 className='subheading'>Thank you!</h1>
+          <h1 className='title'>Date Request Sent!💌</h1>
+          <img src='../public/8.gif' alt='Page 5 GIF' className='page-gif' />
+          <p className='subheading'>Looking forward to it :)</p>
         </>
       )}
     </div>
